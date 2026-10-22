@@ -3,7 +3,7 @@ function generarNumeroAleatorio() {
     let numero= Math.floor(Math.random() * 100) + 1;
     return numero;
 }
-console.log(generarNumeroAleatorio());
+
 
 
 function generarAleatorios() {
@@ -17,5 +17,12 @@ function generarAleatorios() {
         return;
     }
 
-    console.log(cantidad);
+   for (let i = 0; i < cantidad; i++) {
+    console.log(i);
+
+    let numero = generarNumeroAleatorio();
+    aleatorios.push(numero);
+    
+    }
+    console.log(aleatorios);
 }
