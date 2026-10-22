@@ -25,4 +25,19 @@ function generarAleatorios() {
     
     }
     console.log(aleatorios);
+    mostrarResultados(aleatorios);
+}
+
+
+function mostrarResultados(arregloNumeros) {
+    let tabla = "<table border='1'>";
+    tabla += "<tr><th>Números aleatorios</th></tr>";
+
+    for (let i = 0; i < arregloNumeros.length; i++) {
+        tabla += "<tr><td>" + arregloNumeros[i] + "</td></tr>";
+    }
+
+    tabla += "</table>";
+
+    document.getElementById("divResultado").innerHTML = tabla;
 }
