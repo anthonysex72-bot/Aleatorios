@@ -3,19 +3,80 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Numeros Aleatorios</title>
-    <script src="utilitarios.js"></script>
-    <script src="aleatorios.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de números aleatorios</title>
+
+    <link rel="stylesheet" href="aleatorios.css">
+
+    <script src="utilitarios.js" defer></script>
+    <script src="aleatorios.js" defer></script>
 </head>
 <body>
-    <h1>Generar numeros aleatorios</h1>
 
-    <div>
-        <label for="txtCantidad">Cantidad de números (5 a 20):</label>
-        <input type="text" id="txtCantidad">
-        <button onclick="generarAleatorios()">Generar</button>
-    </div>
+    <main class="contenedor">
+        
+    <header class="encabezado">
+    <span class="etiqueta">HERRAMIENTA DIGITAL</span>
 
-    <div id="divResultado"></div>
+    <h1>Generador de números</h1>
+
+    <p class="descripcion">
+        Una forma sencilla y precisa de generar números aleatorios.
+    </p>
+
+    <p class="autor">
+        Creado por <strong>Anthony Regalado</strong>
+    </p>
+    </header>
+
+
+        <section class="tarjeta">
+            <div class="indicador">
+                <span class="punto"></span>
+                Generador disponible
+            </div>
+
+            <h2>Configura tu generación</h2>
+            <p class="texto-ayuda">
+                Selecciona cuántos números deseas obtener.
+            </p>
+
+            <div class="formulario">
+                <label for="txtCantidad">Cantidad de números</label>
+
+                <input
+                    type="text"
+                    id="txtCantidad"
+                    placeholder="Ej. 5"
+                    inputmode="numeric"
+                    autocomplete="off"
+                >
+
+                <span class="nota">Introduce un valor entre 5 y 20.</span>
+
+                <button onclick="generarAleatorios()">
+                    Generar números
+                    <span class="flecha">→</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="resultados">
+            <div class="titulo-resultados">
+                <div>
+                    <span class="etiqueta">RESULTADOS</span>
+                    <h2>Tus números generados</h2>
+                </div>
+            </div>
+
+            <div id="divResultado"></div>
+        </section>
+
+        <footer class="pie">
+            <span>GENERADOR ALEATORIO</span>
+            <span>Una herramienta para resultados al instante.</span>
+        </footer>
+    </main>
+
 </body>
 </html>

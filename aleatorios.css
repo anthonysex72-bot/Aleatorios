@@ -1,0 +1,362 @@
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --beige: #e9dfd0;
+    --beige-claro: #f8f5ef;
+    --blanco: #ffffff;
+    --negro: #24231f;
+    --gris: #77736c;
+    --borde: #e4ddd2;
+    --acento: #8c7355;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--beige-claro);
+    color: var(--negro);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+================================= */
+
+.contenedor {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+}
+
+/* ==============================
+   ENCABEZADO
+================================= */
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--acento);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.encabezado h1 {
+    font-size: clamp(28px, 5vw, 43px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+.descripcion {
+    max-width: 450px;
+    margin: 14px auto 0;
+    color: var(--gris);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ==============================
+   TARJETA DEL FORMULARIO
+================================= */
+
+.tarjeta {
+    width: 100%;
+    padding: 36px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(48, 39, 27, 0.06);
+}
+
+.indicador {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 13px;
+    border-radius: 30px;
+    background: var(--beige-claro);
+    color: var(--gris);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.punto {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #66845c;
+}
+
+.tarjeta h2,
+.resultados h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.texto-ayuda {
+    margin-top: 9px;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+/* ==============================
+   FORMULARIO
+================================= */
+
+.formulario {
+    width: 100%;
+    max-width: 340px;
+    margin: 28px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+}
+
+.formulario label {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.formulario input {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    border: 1px solid #d8cdbd;
+    border-radius: 9px;
+    background: #fdfcf9;
+    color: var(--negro);
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formulario input::placeholder {
+    color: #aaa398;
+}
+
+.formulario input:focus {
+    border-color: var(--acento);
+    box-shadow: 0 0 0 3px rgba(140, 115, 85, 0.12);
+}
+
+.nota {
+    margin-top: 9px;
+    color: var(--gris);
+    font-size: 12px;
+}
+
+/* ==============================
+   BOTÓN
+================================= */
+
+.formulario button {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 22px;
+    padding: 13px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid var(--negro);
+    border-radius: 9px;
+    background: var(--negro);
+    color: var(--blanco);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.formulario button:hover {
+    background: var(--acento);
+    border-color: var(--acento);
+    transform: translateY(-2px);
+}
+
+.formulario button:active {
+    transform: translateY(0);
+}
+
+.formulario button:focus-visible {
+    outline: 3px solid var(--beige);
+    outline-offset: 3px;
+}
+
+.flecha {
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* ==============================
+   RESULTADOS Y TABLA
+================================= */
+
+.resultados {
+    margin-top: 35px;
+    padding: 28px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(48, 39, 27, 0.04);
+}
+
+.titulo-resultados {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.titulo-resultados .etiqueta {
+    margin-bottom: 9px;
+}
+
+#divResultado {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#divResultado table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#divResultado th {
+    padding: 14px 16px;
+    background: var(--beige);
+    color: var(--negro);
+    text-align: left;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+#divResultado td {
+    padding: 13px 16px;
+    border-bottom: 1px solid #eee9e1;
+    color: var(--negro);
+}
+
+#divResultado tr:last-child td {
+    border-bottom: none;
+}
+
+#divResultado tbody tr:nth-child(even) {
+    background: #fcfaf7;
+}
+
+#divResultado tbody tr:hover {
+    background: var(--beige-claro);
+}
+
+/* ==============================
+   PIE DE PÁGINA
+================================= */
+
+.pie {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--gris);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+.pie span:first-child {
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/* ==============================
+   DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 28px 15px;
+        align-items: flex-start;
+    }
+
+    .encabezado {
+        margin-bottom: 24px;
+    }
+
+    .encabezado h1 {
+        letter-spacing: -0.8px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+
+    .tarjeta {
+        padding: 27px 20px;
+        border-radius: 14px;
+    }
+
+    .tarjeta h2,
+    .resultados h2 {
+        font-size: 19px;
+    }
+
+    .formulario {
+        margin-top: 24px;
+    }
+
+    .resultados {
+        margin-top: 22px;
+        padding: 22px 15px;
+        border-radius: 14px;
+    }
+
+    #divResultado th,
+    #divResultado td {
+        padding: 12px 10px;
+    }
+
+    .pie {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 23px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
